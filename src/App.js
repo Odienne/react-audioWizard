@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Container, Row, Col} from 'react-bootstrap';
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import TopNav from './components/TopNav';
+import LeftNav from './components/LeftNav';
+import MainApp from './components/MainApp';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Container fluid>
+                <Row>
+                    <TopNav/>
+                </Row>
+                <Row>
+                    <Col sm={3}>
+                        <LeftNav/>
+                    </Col>
+                    <Col>
+                        <MainApp/>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    );
 }
 
 export default App;
