@@ -17,15 +17,15 @@ export default class TopNav extends React.Component {
             <Container fluid>
                 <Navbar>
                     <Col sm={2}>
-                            <Navbar.Brand href="/">
-                                <img
-                                    src={logo}
-                                    width="100"
-                                    height="100"
-                                    className="d-inline-block align-top"
-                                    alt="AudioWizard Logo"
-                                />
-                            </Navbar.Brand>
+                        <Navbar.Brand href="/">
+                            <img
+                                src={logo}
+                                width="100"
+                                height="100"
+                                className="d-inline-block align-top"
+                                alt="AudioWizard Logo"
+                            />
+                        </Navbar.Brand>
 
                     </Col>
                     <Col sm={{span: 2, offset: 8}}>

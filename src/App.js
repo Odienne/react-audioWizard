@@ -18,31 +18,35 @@ import {
     Link
 } from "react-router-dom";
 
+// On importe la classe `PatientProvider`
+import PatientProvider from "./store/PatientProvider";
+
 function App() {
     return (
-        <div className="App">
-            <Router>
-                <Container fluid>
-                    <Row>
-                        <TopNav/>
-                    </Row>
-                    <Row>
-                        <Col sm={3}>
-                            <LeftNav/>
-                        </Col>
-                        <Col>
-                            <Switch>
-                                <Route path="/" exact component={Accueil}/>
-                                <Route path="/visite-form-name" exact component={MainApp}/>
-                                <Route path="/visite-form-sexe" exact component={FormSexe}/>
-                                <Route path="/visite-form-final" exact component={FormFinal}/>
-                            </Switch>
-                        </Col>
-                    </Row>
-                </Container>
-            </Router>
-
-        </div>
+        <PatientProvider>
+            <div className="App">
+                <Router>
+                    <Container fluid>
+                        <Row>
+                            <TopNav/>
+                        </Row>
+                        <Row>
+                            <Col sm={3}>
+                                <LeftNav/>
+                            </Col>
+                            <Col>
+                                <Switch>
+                                    <Route path="/" exact component={Accueil}/>
+                                    <Route path="/visite-form-name" exact component={MainApp}/>
+                                    <Route path="/visite-form-sexe" exact component={FormSexe}/>
+                                    <Route path="/visite-form-final" exact component={FormFinal}/>
+                                </Switch>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Router>
+            </div>
+        </PatientProvider>
     );
 }
 

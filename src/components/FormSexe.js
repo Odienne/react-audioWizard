@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './MainApp.css';
 
 import {Form, Row, Col} from 'react-bootstrap';
@@ -8,13 +8,16 @@ import {ArrowRight, ArrowLeft} from 'react-bootstrap-icons';
 import {useHistory} from "react-router-dom";
 import {useForm} from "react-hook-form";
 
+import PatientProvider, {PatientContext} from "../store/PatientProvider";
+
 export default function MainApp() {
 
     const history = useHistory();
     const {register, handleSubmit} = useForm();
+    const state = useContext(PatientContext)
 
     function onSubmitForm(formData) {
-        console.log(formData.gender)
+        state.setGender(formData.gender) //maj du gender
         if (formData.gender !== "") history.push("/visite-form-final")
     }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './MainApp.css';
 
 import {Form, Row, Col} from 'react-bootstrap';
@@ -7,15 +7,19 @@ import {ArrowRight} from 'react-bootstrap-icons';
 
 import {useHistory} from "react-router-dom";
 import {useForm} from "react-hook-form";
+import PatientProvider, {PatientContext} from "../store/PatientProvider";
 
 export default function MainApp() {
 
     const history = useHistory();
     const { register, handleSubmit } = useForm();
+    const state = useContext(PatientContext)
 
     function onSubmitForm(formData) {
         /*check form*/
-        if (formData.firstname !== '' && formData.lastName !== '') history.push("/visite-form-sexe");
+        state.setFirstname(formData.firstname);
+        state.setLastname(formData.lastname);
+        if (formData.firstname !== '' && formData.lastname !== '') history.push("/visite-form-sexe");
     }
 
     return (
