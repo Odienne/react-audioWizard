@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import {Container, Row, Col} from 'react-bootstrap';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {Container, Row, Col} from 'react-bootstrap';
+
 import TopNav from './components/TopNav';
 import LeftNav from './components/LeftNav';
 import Accueil from './components/Accueil';
 import MainApp from './components/MainApp';
+import FormSexe from './components/FormSexe';
+import FormFinal from './components/FormFinal';
 
 import {
     BrowserRouter as Router,
@@ -17,10 +20,8 @@ import {
 
 function App() {
     return (
-
         <div className="App">
             <Router>
-
                 <Container fluid>
                     <Row>
                         <TopNav/>
@@ -32,7 +33,9 @@ function App() {
                         <Col>
                             <Switch>
                                 <Route path="/" exact component={Accueil}/>
-                                <Route path="/visite" exact component={MainApp}/>
+                                <Route path="/visite-form-name" exact component={MainApp}/>
+                                <Route path="/visite-form-sexe" exact component={FormSexe}/>
+                                <Route path="/visite-form-final" exact component={FormFinal}/>
                             </Switch>
                         </Col>
                     </Row>
