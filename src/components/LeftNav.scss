@@ -1,0 +1,14 @@
+.menu-item {
+  margin: 32px 26px;
+
+  a {
+    background-color: cornflowerblue;
+    border: 1px solid #454;
+    color: #000;
+    padding: 26px 32px;
+
+    &.active {
+      background-color: coral;
+    }
+  }
+}

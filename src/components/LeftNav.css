@@ -1,0 +1,14 @@
+.menu-item {
+  margin: 32px 26px;
+}
+.menu-item a {
+  background-color: cornflowerblue;
+  border: 1px solid #454;
+  color: #000;
+  padding: 26px 32px;
+}
+.menu-item a.active {
+  background-color: coral;
+}
+
+/*# sourceMappingURL=LeftNav.css.map */
