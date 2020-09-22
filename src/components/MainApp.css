@@ -1,0 +1,14 @@
+.form-patient {
+  margin: 100px 0 40px 0;
+}
+.form-patient .form-content {
+  margin-bottom: 50px;
+}
+.form-patient .form-submit-btn {
+  display: flex;
+  font-size: 2em;
+  margin: auto;
+  padding: 0 40px;
+}
+
+/*# sourceMappingURL=MainApp.css.map */

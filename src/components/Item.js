@@ -6,7 +6,7 @@ export default class LeftNav extends React.Component {
     render() {
         return (
                     <Nav.Item className="menu-item">
-                        <Nav.Link eventKey={this.props.href} href={this.props.href}> {this.props.text} </Nav.Link>
+                        <Nav.Link href={this.props.href}> {this.props.text} </Nav.Link>
                     </Nav.Item>
         );
     }
